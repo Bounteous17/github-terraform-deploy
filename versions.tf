@@ -14,6 +14,7 @@ resource "github_branch_protection" "main" {
   repository_id = github_repository.repo-1-type-x.node_id
 
   pattern                         = "main"
+  enforce_admins                  = true
   allows_deletions                = false
   allows_force_pushes             = false
   require_signed_commits          = true
