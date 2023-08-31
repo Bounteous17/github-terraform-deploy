@@ -1,13 +1,9 @@
-provider "github" {
-  token = var.provider_github_token
-  owner = "terraformed-organization"
-}
-
 resource "github_repository" "repo-1-type-x" {
-  name        = "repo-1-type-x"
-  description = "This is my 1 Github repository type x"
-  visibility  = "public"
-  auto_init   = true
+  name                   = "repo-1-type-x"
+  description            = "This is my 1 Github repository type x"
+  visibility             = "public"
+  auto_init              = true
+  delete_branch_on_merge = true
 }
 
 resource "github_branch_protection" "main" {

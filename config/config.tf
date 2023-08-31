@@ -1,0 +1,3 @@
+module "repos" {
+  source = "./repos"
+}
